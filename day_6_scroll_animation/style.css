@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+::-webkit-scrollbar {
+    width: 2em;
+}
+
+::-webkit-scrollbar-track {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(110deg, rgba(2, 0, 36, 0.75) 0%, rgba(4, 114, 190, 0.75) 50%, rgba(2, 153, 216, 0.75) 75%, rgba(0, 212, 255, 0.75) 100%);
+    border-radius: 100vw;
+    margin-block: .5em;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(122deg, rgba(0, 0, 0, 1) 5%, rgba(42, 73, 94, 1) 31%, rgba(31, 114, 148, 1) 54%, rgba(19, 133, 158, 1) 87%);
+    /* border: .25em solid hsl(90, 85%, 35%); */
+    border-radius: 100vw;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #efedd6;
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+h1 {
+    margin: 10px;
+}
+
+.box {
+    background-color: steelblue;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 200px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
+    transform: translate(500%);
+    transition: transform 0.4s ease;
+}
+
+.box:nth-of-type(even) {
+    transform: translateX(-500%);
+}
+
+.box.show {
+    transform: translateX(0);
+}
+
+.box h2 {
+    font-size: 45px;
+}
